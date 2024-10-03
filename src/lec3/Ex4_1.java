@@ -14,7 +14,7 @@ public class Ex4_1 {
         String name = in.next();//зчитування тексту
         int age = in.nextInt();//зчитування цілого числа
         double height = in.nextDouble();//зчитування дійсного числа
-        System.out.printf("%S\n\t ade:%d\t height:%.2f\n", name, age, height);//виведення зчитаних даних
+        System.out.printf("%S\n\t age:%d\t height:%.2f\n", name, age, height);//виведення зчитаних даних
         in.close();//закриття сканера
     }
 }

@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 /**
- * Запис/читання текстового файла
+ * Запис/читання текстового файла за допомогою FileWriter і FileReader
  */
 public class Ex6_1 {
     public static void main(String[] args) {
@@ -22,15 +22,15 @@ public class Ex6_1 {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        System.out.println("Recording to the file is complete!\n");
 
+        System.out.println("File contents:");
         //Читання з текстового файлу
         try (FileReader reader = new FileReader("src/lec3/demoPrintStream.txt");
              Scanner scan = new Scanner(reader)) {
             while (scan.hasNextLine()) {
                 System.out.println(scan.nextLine());
             }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }

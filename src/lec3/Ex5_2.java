@@ -16,7 +16,7 @@ public class Ex5_2 {
 
         try (Scanner scanner = new Scanner(contents)){
             do {
-                System.out.println(scanner.nextLine());
+                System.out.println(scanner.next());
             }while (scanner.hasNextLine());
         }
 

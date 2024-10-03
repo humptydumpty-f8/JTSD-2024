@@ -9,8 +9,8 @@ public class Ex7_1 {
     public static void main(String[] args) {
 
         System.out.println("Parameters:");
-        for (int i = 0; i < args.length ; i++) {
-            System.out.printf("%d \t %s \n", i,args[i]);
+        for (int i = 0; i < args.length; i++) {
+            System.out.printf("#%d \t %s \n", i, args[i]);
         }
     }
 }
