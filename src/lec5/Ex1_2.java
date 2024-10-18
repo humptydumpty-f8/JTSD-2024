@@ -28,10 +28,11 @@ public class Ex1_2 {
         double[] d_arr = {1,2,3};
         Character[] c_arr = {'1',126,'\u0077'};
         boolean[] bul_arr = {false,true,false};
-        String[] str = {"one","two","three"};
+        String[] str_arr = {"one","two","three"};
 
-        System.out.println("element["+INDEX_OF_ELEMENT+"]: "+getByIndex(INDEX_OF_ELEMENT,i_arr));
-        System.out.println("element["+INDEX_OF_ELEMENT+"]: "+getByIndex(INDEX_OF_ELEMENT,c_arr));
-        System.out.println("element["+INDEX_OF_ELEMENT+"]: "+getByIndex(INDEX_OF_ELEMENT,str));
+        System.out.println("i_arr["+INDEX_OF_ELEMENT+"]: "+getByIndex(INDEX_OF_ELEMENT,i_arr));
+        System.out.println("c_arr["+INDEX_OF_ELEMENT+"]: "+getByIndex(INDEX_OF_ELEMENT,c_arr));
+        System.out.println("str_arr["+INDEX_OF_ELEMENT+"]: "+getByIndex(INDEX_OF_ELEMENT,str_arr));
+        System.out.println("b_arr["+INDEX_OF_ELEMENT+"]: "+getByIndex(INDEX_OF_ELEMENT, new Byte[] {1,2,3}));
     }
 }
