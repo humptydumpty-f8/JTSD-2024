@@ -39,9 +39,14 @@ public class Ex6_1 {
 
         System.out.println("New HashMap: ");
         // перебір елементів
-        for (Map.Entry<Integer, String> item : nameOfNumbers.entrySet()) {
+        for (Integer key: nameOfNumbers.keySet()) {
+            System.out.printf("\tKey:%d Value:%S %n", key, nameOfNumbers.get(Integer.valueOf(key)));
+        }
 
-            System.out.printf("Key:%d Value:%s %n", item.getKey(), item.getValue());
+        System.out.println("Same with entrySet: ");
+        // перебір елементів за допомогою entrySet
+        for (Map.Entry<Integer, String> item : nameOfNumbers.entrySet()) {
+            System.out.printf("\tKey:%d Value:%S %n", item.getKey(), item.getValue());
         }
     }
 }

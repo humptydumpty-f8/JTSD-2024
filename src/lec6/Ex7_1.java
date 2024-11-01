@@ -16,7 +16,7 @@ public class Ex7_1 {
         System.out.println("1. Method stream():");
         List<String> nameOfNumbers1 = new ArrayList<>(Arrays.asList("one", "two", "three"));
         nameOfNumbers1.stream()
-                .forEach(s -> System.out.println(s));
+                .forEach(x -> System.out.println(x));
 
         //2. Використання метода stream() Arrays
         System.out.println("2. Method Arrays.stream():");

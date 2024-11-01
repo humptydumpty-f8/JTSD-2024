@@ -20,11 +20,10 @@ public class Ex5_4 {
         namePriorityQueue.add ( "Левко");
         namePriorityQueue.add ( "Катерина");
 
-        System.out.println("Черговість за пріоритетами: " + namePriorityQueue);
-
         // Видалення елементів відбувається за природним порядком (за алфавітом)
         while (! namePriorityQueue.isEmpty ()) {
-            System.out.println (namePriorityQueue.remove ());
+            System.out.println("Черга: " + namePriorityQueue);
+            System.out.println ("\tВидалено: " +namePriorityQueue.remove ());
         }
     }
 }
