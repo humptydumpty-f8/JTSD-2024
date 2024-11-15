@@ -23,7 +23,7 @@ public class Ex3_1 {
             }
 
             public void setAuthors(String authors) {
-                if(authors.matches("[A-Z][a-zA-Z0-9,.\\s]*")) this.authors = authors;
+                if(authors.matches("[A-Z][a-zA-Z,.\\s]*")) this.authors = authors;
             }
 
             public void setPublisher(String publisher) {
