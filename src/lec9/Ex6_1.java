@@ -1,49 +1,74 @@
 package lec9;
-
 /**
- * Перевизначення методів класу Object
+ * Приклад використання патерну делегування
  */
 public class Ex6_1 {
+    /**
+     * Визначення інтерфейсу
+     */
+    interface Car {
+        public void ride(String name);
+    }
+
+    private static final String RIDER = "Tom";
+
     public static void main(String[] args) {
 
-        class Person {
-            private String name;
+        /**
+         * Реалізує делегування
+         */
+        class CarController implements Car {
 
-            public Person(String name) {
-                this.name = name;
-            }
+            private final Car car;
 
-            public Person() {
-                super();
-            }
+            public CarController(Car car) { this.car = car; }
 
             @Override
-            public String toString() {
-                return "Person " + name;
-            }
-
-            @Override
-            public int hashCode() {
-                return this.name.hashCode();
-            }
-
-            @Override
-            public boolean equals(Object obj) {
-                if (!(obj instanceof Person)) return false;
-                Person p = (Person)obj;
-                return this.name.equals(p.name);
-            }
+            public void ride(String name) {
+                car.ride(name);
+            };
         }
 
-        Person person1 = new Person("Pupkin");
-        Person person2 = new Person("Pupkin");
+/*
+ * Допоміжні класи, які безпосередньо виконують дію – BMWCar, MercedesCar, VolvoCar –
+ * вони також реалізують інтерфейс Car, але в самому додатку викликаються опосередковано
+ * через екземпляр класу CarController, який делегує їм виконання роботи
+*/
 
-        System.out.println(person1.toString());
-        System.out.println(person2.toString());
+        /**
+         * Допоміжний клас для моделі автомобіля BMW
+         */
+        class BMWCar implements Car {
+            @Override
+            public void ride(String name) {
+                System.out.println(name + " rides in BMW");
+            };
+        }
+        /**
+         * Допоміжний клас для моделі автомобіля Mercedes
+         */
+        class MercedesCar implements Car {
+            @Override
+            public void ride(String name) {
+                System.out.println(name + " rides in Mercedes");
+            };
+        }
+        /**
+         * Допоміжний клас для моделі автомобіля Volvo
+         */
+        class VolvoCar implements Car {
+            @Override
+            public void ride(String name) {
+                System.out.println(name + " rides in Volvo");
+            };
+        }
 
-        System.out.println(person1.hashCode());
-        System.out.println(person2.hashCode());
+        CarController bmw = new CarController(new BMWCar());
+        CarController mercedes = new CarController(new MercedesCar());
+        CarController volvo = new CarController(new VolvoCar());
 
-        System.out.println(person2.equals(person1));
+        bmw.ride(RIDER);
+        mercedes.ride(RIDER);
+        volvo.ride(RIDER);
     }
 }

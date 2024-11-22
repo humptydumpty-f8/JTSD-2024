@@ -8,8 +8,8 @@ public class Ex1_1 {
 
     //Батьківський клас
     static class User {
-        int id;
-        String name;
+        protected int id;
+        protected String name;
 
         public void print() {
             System.out.println("User{" +
@@ -21,7 +21,7 @@ public class Ex1_1 {
 
     //Клас-спадкоємець
     static class Manager extends User {
-        String company;
+        protected String company;
     }
 
     public static void main(String[] args) {

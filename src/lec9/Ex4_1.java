@@ -1,34 +1,26 @@
 package lec9;
 
 /**
- * Динамічний поліморфізм (перевизначення методів)
+ * Фіналізація методу та класу
  */
 public class Ex4_1 {
-
     public static void main(String[] args) {
 
-        //Батьківський клас
-        class A {
-            A(){}
-            void start(){
-                System.out.println("Start from A");
+        class А {
+
+            //Фіналізований метод
+            final void meth() {
+                System.out.println(" Це фіналізований метод. ");
             }
         }
 
-        //Клас-нащадок
-        class B extends A {
-            B(){super();}
-            //Перевизначення методу
-            @Override
-            void start() {
-                System.out.println("Start from B");
-            }
+        //Фіналізований клас
+        final class В extends А {
+            // Цей метод не може перевизначатись
+            //void meth ( ) {System.out.println ( " Помилка! " ) ;
         }
 
-
-        B objB = new B();
-        //Виклик перевизначеного методу
-        objB.start();//"Start from B"
-
+        //Клас B не може мати підкласи
+        //class C extends В {}
     }
 }

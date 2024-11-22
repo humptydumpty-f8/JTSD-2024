@@ -1,53 +1,26 @@
 package lec9;
 
 /**
- * Перевантаження методу в успадкованому класі
+ * Фіналізація полів та параметрів методу в класі
  */
 public class Ex4_2 {
     public static void main(String[] args) {
 
-        /**
-         * Батьківський клас
-         */
-        class Person {
-            protected String name;
-            protected int age;
-            /**
-             * Перевантажуваний метод
-             */
-            public void print() {
-                System.out.println("Person{" +
-                        "name='" + name + '\'' +
-                        ", age=" + age +
-                        '}');
+        final int MY_CODE = 12345;//Глобальна константа
+
+        class Foo {
+            final private  int field;//Якщо поле використовується в конструкторі, воно має бути final
+
+            public Foo(final int field) {//Використовується final-параметр методу
+//                field++;
+                this.field = field;
+            }
+
+            void showField() {
+                System.out.println("field: " + field);
             }
         }
 
-        /**
-         * Клас спадкоємця
-         */
-        class Student extends Person{
-            protected String almamater;
-            /**
-             * Перевантажений метод
-             * @param almamater назва освітнього закладу
-             */
-            public void print(String almamater) {
-                System.out.println("Student{" +
-                        "name='" + name + '\'' +
-                        ", age=" + age +
-                        ", almamater='" + almamater + '\'' +
-                        '}');
-            }
-        }
-
-        Student student = new Student() {{
-            this.name="Pupkin";
-            this.age=18;
-        }};
-
-        student.print();//виклик батьківського метода
-        System.out.println();
-        student.print("KPI");//виклик перевантаженого метода
+        (new Foo(MY_CODE)).showField();
     }
 }
