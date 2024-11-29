@@ -7,6 +7,7 @@ public abstract class Animal{
 
     static protected int counter;//Лічильник
     protected String kind;//Вид тварини
+
     abstract String say();//Абстрактний метод
 
     //Гетер лічильника

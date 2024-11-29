@@ -25,6 +25,7 @@ class Student_new_1 {
             }
         };
 
+        recordBook.print();
     }
 }
 

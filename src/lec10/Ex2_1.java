@@ -19,6 +19,7 @@ public class Ex2_1 {
                         ", surName='" + surName + '\'' +
                         '}');
             }
+
         }
 
         //Сценарій використання

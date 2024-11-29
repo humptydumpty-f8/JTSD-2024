@@ -26,6 +26,7 @@ public class Ex1_2 {
             }
         }
 
+
         //Сценарій використання
         Cat felix = new Cat("Felix");
         System.out.printf("%d. %S %S < %S\n",felix.getCounter(),felix.kind,felix.nickname,felix.say());

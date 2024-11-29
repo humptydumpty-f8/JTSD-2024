@@ -6,7 +6,7 @@ package lec10;
 public class Ex1_1 {
     public static void main(String[] args) {
 
-        //Анонімний клас методу
+        //Анонімний внутрішній клас як реалізація абстрактного класу
         Animal animal1 = new Animal("cat") {
             @Override
             String say() {
@@ -15,7 +15,7 @@ public class Ex1_1 {
         };
         System.out.printf("%d. %S < %S\n",animal1.getCounter(),animal1.kind,animal1.say());
 
-        //Анонімний клас методу
+        //Анонімний внутрішній клас як реалізація абстрактного класу
         Animal animal2 = new Animal("dog") {
             @Override
             String say() {
