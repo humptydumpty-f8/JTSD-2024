@@ -12,9 +12,9 @@ import java.awt.event.WindowEvent;
 public class Ex1_3 extends Frame {
 
     //Конструктор з параметром
-    public Ex1_3(String title) {
+    public Ex1_3(final String title) {
 
-        super("Main");
+        super(title);
         setSize(300, 200);//задаються розміри вікна
         setLocation(200, 300);//задається розташування вікна
         //Задається іконка вікна
@@ -37,7 +37,7 @@ public class Ex1_3 extends Frame {
 
     public static void main(String[] args) {
 
-        Frame frame = new Ex1_3("Main");//запуск додатку
+        Frame frame = new Ex1_3("Ex1_3");//запуск додатку
 
         //Обробник кнопки закривання вікна
         frame.addWindowListener(new WindowAdapter() {
