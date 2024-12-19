@@ -10,7 +10,7 @@ import java.awt.event.WindowEvent;
  * Записна книжка - 1
  * Обробники реалізовані як методи анонімного класу
  */
-public class ex3_1 {
+public class Ex3_1 {
     public static void main(String[] args) {
 
         class NoteBook  extends Frame {

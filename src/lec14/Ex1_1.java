@@ -10,7 +10,7 @@ import java.awt.event.WindowEvent;
  * Компонент Label: основні можливості
  * Колір тексту і фону спадкується від Component
  */
-public class ex1_1 {
+public class Ex1_1 {
     public static void main(String[] args) {
 
         class LabelDemo extends Frame {

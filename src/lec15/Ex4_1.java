@@ -11,7 +11,7 @@ import java.util.Random;
  * Стрибаючі кнопки
  * Використовується окремий клас-слухач
  */
-public class ex4_1 {
+public class Ex4_1 {
     public static void main(String[] args) {
 
         class JumpingWindowDemo extends Frame {

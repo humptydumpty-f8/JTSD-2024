@@ -10,7 +10,7 @@ import java.awt.event.WindowEvent;
  * Компонент TextField з маскою
  * Клік по мітці показує прихований тект
  */
-public class ex7_2 {
+public class Ex7_2 {
     public static void main(String[] args) {
 
         class TextFieldDemo extends Frame {

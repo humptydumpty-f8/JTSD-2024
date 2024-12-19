@@ -10,7 +10,7 @@ import java.io.File;
 /**
  * Рисування графічних примітивів на холсті Canvas
  */
-public class ex9_1 {
+public class Ex9_1 {
     public static void main(String[] args) {
 
         // Вкладений клас методу, який успадковує клас Canvas для створення холсту

@@ -9,7 +9,7 @@ import java.awt.event.WindowEvent;
 /**
  * Компонент Choice
  */
-public class ex4_1 {
+public class Ex4_1 {
     public static void main(String[] args) {
 
         class ChoiceDemo extends Frame {

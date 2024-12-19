@@ -7,13 +7,13 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 /**
- * Компонент Choice: прості операції
+ * Компонент List: прості операції
  */
-public class ex4_2 {
+public class Ex5_2 {
     public static void main(String[] args) {
 
-        class ChoiceDemo extends Frame {
-            public ChoiceDemo(String title)  {
+        class ListDemo extends Frame {
+            public ListDemo(String title) {
                 super(title);
                 setSize(300,200);
                 setLocation(200,300);
@@ -25,40 +25,41 @@ public class ex4_2 {
                 gridLayout.setHgap(20);
                 setLayout (gridLayout);
 
-                //Створюємо пустий список і додаєм пункти
-                Choice ch = new Choice();
-                ch.add("One");
-                ch.add("Two");
-                ch.add("Three");
-                ch.select(1);
+                //Створення списку
+                List ls = new List(3,true);
+                ls.add("Диван");
+                ls.add("Чемодан");
+                ls.add("Саквояж");
+                ls.select(0);//вибір за замовчуванням
 
-                Panel panel1 = new Panel();//панель для списку і текстового поля
+                Panel panel1 = new Panel();
                 Panel panel2 = new Panel();//панель з кнопками операцій
                 add(panel1);
                 add(panel2);
 
-                Label label = new Label("New:");
+                Label label = new Label("Добавить:");
                 TextField textField = new TextField("    ");
                 Button buttonAdd = new Button("Add");
                 Button buttonRmv = new Button("Rmv");
                 Button buttonRmvAll = new Button("RmvAll");
 
-                panel1.add(ch);
+                panel1.add(new Label("Дама сдавала в багаж:"));
+                panel1.add(ls);
                 panel1.add(label);
                 panel1.add(textField);
                 panel2.add(buttonAdd);
                 panel2.add(buttonRmv);
                 panel2.add(buttonRmvAll);
 
-//                pack();//упаковка компонентів
+//                pack();
 
-                setVisible(true);//візуалізація форми
+                setVisible(true);
 
                 //Обробник кнопки додавання елементів в список
                 buttonAdd.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
-                        ch.add(textField.getText());
+                        ls.add(textField.getText());
                         textField.setText("   ");
                     }
                 });
@@ -67,7 +68,7 @@ public class ex4_2 {
                 buttonRmv.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
-                        ch.remove(ch.getSelectedItem());
+                        ls.remove(ls.getSelectedItem());
                     }
                 });
 
@@ -75,7 +76,7 @@ public class ex4_2 {
                 buttonRmvAll.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
-                        ch.removeAll();
+                        ls.removeAll();
                     }
                 });
 
@@ -90,6 +91,6 @@ public class ex4_2 {
         }
 
         //Сценарій роботи
-        new ChoiceDemo("ChoiceDemo");
+        new ListDemo("ListDemo");
     }
 }

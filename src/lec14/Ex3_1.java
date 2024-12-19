@@ -9,7 +9,7 @@ import java.awt.event.WindowEvent;
 /**
  * Компонент Checkbox: зчитування стану прапорця
  */
-public class ex3_1 {
+public class Ex3_1 {
     public static void main(String[] args) {
 
         class CheckboxDemo extends Frame {

@@ -7,11 +7,11 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 /**
- * Записна книжка - 2
+ * Записна книжка - 3
  * Обробники реалізовані як методи окремого класу-слухача.
- * Екземпляри слухача  створюються тільки при виникненні події
+ * Екземпляр слухача  створюються завжди, а не тільки при виникненні події
  */
-public class ex3_2 {
+public class Ex3_3 {
     public static void main(String[] args) {
 
         class NoteBook  extends Frame {
@@ -42,9 +42,10 @@ public class ex3_2 {
                     }
                 });
 
-                //Екземпляри слухача  створюються тільки при виникненні події
-                tf.addActionListener(new TextMove(tf,ta));
-                btn.addActionListener(new TextMove(tf,ta));
+                //Екземпляр слухача  створюються завжди, а не тільки при виникненні події
+                TextMove tm = new TextMove(tf,ta);
+                tf.addActionListener(tm);
+                btn.addActionListener(tm);
             }
 
             //Клас слухача

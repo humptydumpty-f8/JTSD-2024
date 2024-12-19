@@ -10,7 +10,7 @@ import java.awt.event.WindowEvent;
  * Компонент TextField з маскою для приховування введеного тексту
  * Маска включається/виключається за допомогою прапорця
  */
-public class ex7_1 {
+public class Ex7_1 {
     public static void main(String[] args) {
 
         class TextFieldDemo extends Frame {

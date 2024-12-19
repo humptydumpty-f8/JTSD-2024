@@ -10,7 +10,7 @@ import java.awt.event.WindowEvent;
  * Компоненти TextField і TextArea
  * Текст, що вводться в TextField, після натиснення Enter додається в TextArea
  */
-public class ex7_0 {
+public class Ex7_0 {
 
     /**
      * Клас містить статичне поле buffer і тому не може використовуватись як вкладений клас в main().

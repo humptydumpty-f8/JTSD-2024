@@ -10,7 +10,7 @@ import java.awt.event.WindowEvent;
  * Рисування графічних примітивів на холсті Canvas
  * з обробником події
  */
-public class ex9_2 {
+public class Ex9_2 {
 
     public static void main(String[] args) {
 

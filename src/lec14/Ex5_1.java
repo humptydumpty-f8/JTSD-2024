@@ -10,7 +10,7 @@ import java.util.Arrays;
 /**
  * Компонент List: вибір елемента списку
  */
-public class ex5_1 {
+public class Ex5_1 {
     public static void main(String[] args) {
 
         class ListDemo extends Frame {

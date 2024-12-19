@@ -9,7 +9,7 @@ import java.awt.event.WindowEvent;
 /**
  * Компонент Button: логування дій
  */
-public class ex2_2 {
+public class Ex2_2 {
     public static void main(String[] args) {
 
         class ButtonDemo extends Frame {

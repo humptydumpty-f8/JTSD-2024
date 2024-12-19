@@ -7,32 +7,25 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 /**
- * Компонент Scrollbar як слайдер
+ * Компонент Scrollbar як слайдер для встановлення розміру шрифту
  */
-public class ex6_1 {
+public class Ex6_2 {
     public static void main(String[] args) {
 
         class ScrollbarDemo extends Frame {
             public ScrollbarDemo(String title)  {
                 super(title);
-                setSize(300, 200);
-                setLocation(200, 300);
+                setSize(300,200);
+                setLocation(200,300);
 
-                GridLayout gridLayout = new GridLayout();
-                gridLayout.setColumns(1);
-                gridLayout.setRows(2);
-                gridLayout.setVgap(10);
-                gridLayout.setHgap(20);
-                setLayout(gridLayout);
+                //Створення слайдера
+                Scrollbar scrollbar = new Scrollbar(Scrollbar.HORIZONTAL,10,2,0,50);
 
-                //Створення лінійки прокручування
-                Scrollbar scrollbar = new Scrollbar(Scrollbar.HORIZONTAL, 12, 1, 10, 24);
+                TextArea textArea = new TextArea("Text");
+                textArea.setFont(new Font("Arial",Font.BOLD,scrollbar.getValue()));
 
-                Label label = new Label("Text", Label.CENTER);
-                label.setText(Integer.toString(scrollbar.getValue()));
-
-                add(scrollbar);
-                add(label);
+                add(scrollbar,"North");
+                add(textArea,"Center");
 
 //                pack();
                 setVisible(true);
@@ -41,12 +34,13 @@ public class ex6_1 {
                 scrollbar.addMouseListener(new MouseListener() {
                     @Override
                     public void mouseClicked(MouseEvent e) {
-                        label.setText(Integer.toString(scrollbar.getValue()));
+
+                       // textArea.setFont(new Font("Arial",Font.BOLD,scrollbar.getValue()));
                     }
 
                     @Override
                     public void mousePressed(MouseEvent e) {
-
+                        textArea.setFont(new Font("Arial",Font.BOLD,scrollbar.getValue()));
                     }
 
                     @Override
@@ -56,11 +50,11 @@ public class ex6_1 {
 
                     @Override
                     public void mouseEntered(MouseEvent e) {
-                        scrollbar.setBackground(new Color(0, 255, 0));
+
                     }
 
                     @Override
-                    public void mouseExited(MouseEvent e) {scrollbar.setBackground(new Color(255, 255, 255));
+                    public void mouseExited(MouseEvent e) {
 
                     }
                 });

@@ -6,7 +6,7 @@ import java.awt.event.*;
 /**
  * Побудова меню команд
  */
-public class ex8_1 {
+public class Ex8_1 {
     public static void main(String[] args) {
 
         class MenuDemo extends Frame {

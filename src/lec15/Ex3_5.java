@@ -10,7 +10,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-public class ex3_5 {
+public class Ex3_5 {
     public static void main(String[] args) {
 
         class NoteBook extends Frame {

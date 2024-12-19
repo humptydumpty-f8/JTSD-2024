@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-public class ex3_4 {
+public class Ex3_4 {
     public static void main(String[] args) {
 
         class NoteBook  extends Frame implements ActionListener{

@@ -9,7 +9,7 @@ import java.awt.event.WindowEvent;
 /**
  * Компонент Label: динамічні ефекти
  */
-public class ex1_2 {
+public class Ex1_2 {
     public static void main(String[] args) {
 
         class LabelDemo extends Frame {

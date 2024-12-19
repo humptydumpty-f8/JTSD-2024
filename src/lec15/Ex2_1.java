@@ -9,7 +9,7 @@ import java.awt.event.WindowEvent;
 /**
  * Візуалізація відомостей про обєкт події за допомогою paramString()
  */
-public class ex2_1 {
+public class Ex2_1 {
     public static void main(String[] args) {
 
         class ParamStringDemo  extends Frame implements ActionListener{
