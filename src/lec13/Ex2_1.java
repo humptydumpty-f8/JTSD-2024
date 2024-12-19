@@ -7,7 +7,7 @@ import java.awt.event.WindowEvent;
 /**
  * Менеджер CardLayout для компоновки вікна
  */
-public class ex2_1 {
+public class Ex2_1 {
     public static void main(String[] args) {
 
         //Внутрішній клас методу

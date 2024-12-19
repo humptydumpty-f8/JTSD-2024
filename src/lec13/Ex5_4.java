@@ -5,10 +5,10 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 /**
- * Менеджер GridBagLayout для панелі
- * з обєднанням комірок
+ * Менеджер GridBagLayout для панелі авторизації
+ * з відносним розміщенням компонентів
  */
-public class ex5_3 {
+public class Ex5_4 {
     public static void main(String[] args) {
 
         //Внутрішній клас методу
@@ -20,26 +20,24 @@ public class ex5_3 {
                 setSize(300,200);
                 setLocation(200,300);
 
-                GridBagLayout gbl = new GridBagLayout();// створюємо менеджер
+                GridBagLayout gbl = new GridBagLayout();//створюємо менеджер
                 setLayout(gbl);// встановлюємо його в контейнер
                 GridBagConstraints c = new GridBagConstraints();// задаєм правила разміщення за замовчуванням
 
-                Button b1 = new Button("Button 1");// створюємо компонент
-                c.gridx  = 0; // змінюєм правила
-                add(b1, c); // додаєм компонент b1 в контейнер
-
-                c.gridy  = 1; // змінюєм правила размещения
+                c.gridx  = 0;// змінюєм правила размещения
+                c.gridy  = 0;
                 c.gridx = GridBagConstraints.RELATIVE;
-                Button b2 = new Button("Button 2"); // створюємо компонент
-                add(b2, c); // встановлюємо його
-                Button b3 = new Button("Button 3"); // створюємо компонент
-                add(b3, c); // встановлюємо його
+                Label login = new Label("Login: ");// створюємо компонент
+                TextField tLogin = new TextField("Login");
+                add(login, c);//додаємо в контейнер
+                add(tLogin, c);
 
-                c.gridy  = 2;// змінюєм правила размещения
-                c.gridwidth =2;
-                c.fill = GridBagConstraints.HORIZONTAL;
-                Button b4 = new Button("Button 4");// створюємо компонент
-                add(b4, c);// встановлюємо його
+                c.gridy  = 1;// змінюєм правила размещения
+                c.gridx = GridBagConstraints.RELATIVE;
+                Label pasword = new Label("Pasword: ");// створюємо компонент
+                TextField tPasword = new TextField("Pasword");
+                add(pasword, c);//додаємо в контейнер
+                add(tPasword, c);
 
                 setVisible(true);//візуалізація форми
 

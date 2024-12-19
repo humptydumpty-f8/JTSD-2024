@@ -5,24 +5,26 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 /**
- * Менеджер GridLayout для компоновки кнопок калькулятора
+ * Менеджер BorderLayout для компоновки вікна
  */
-public class ex4_1 {
+public class Ex3_1 {
     public static void main(String[] args) {
 
         //Внутрішній клас методу
-        class GridLayoutDemo extends Frame {
+        class BorderLayoutDemo extends Frame {
 
             //Конструктор
-            public GridLayoutDemo(String title) {
+            public BorderLayoutDemo(String title)  {
                 super(title);
                 setSize(300,200);
                 setLocation(200,300);
 
-                //Перевизначення дефолтного менеджера форми на GridLayout
-                setLayout(new GridLayout(4, 4, 5, 5));//таблиця 4х4 з відступами по 5 пікселів
-                String st = new String("789/456*123-0.=+");//радок для написів на кнопках
-                for (char c : st.toCharArray()){add(new Button(Character.toString(c)));}//додавання кнопок на форму
+                //Розміщення компонентів на формі дефолтним менеджером - BorderLayout
+                add(new Button("North"),BorderLayout.NORTH);
+                add(new Button("South"), BorderLayout.SOUTH);
+                add(new Button("West"), BorderLayout.WEST);
+                add(new Button("East"), BorderLayout.EAST);
+                add(new Button("Center"));
 
                 setVisible(true);//візуалізація форми
 
@@ -37,6 +39,6 @@ public class ex4_1 {
         }
 
         //Сценарій роботи
-        new GridLayoutDemo("GridLayoutDemo");
+        new BorderLayoutDemo("BorderLayoutDemo");//відкри форму
     }
 }

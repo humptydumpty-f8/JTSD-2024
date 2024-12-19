@@ -7,7 +7,7 @@ import java.awt.event.WindowEvent;
 /**
  * Менеджер GridBagLayout для вікна Frame
  */
-public class ex5_1 {
+public class Ex5_1 {
     public static void main(String[] args) {
 
         //Внутрішній клас методу

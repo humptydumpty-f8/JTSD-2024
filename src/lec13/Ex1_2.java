@@ -8,7 +8,7 @@ import java.awt.event.WindowEvent;
  * Стандартні менеджер компоновки в різних контейнерах:
  * FlowLayout для Panel, BorderLayout для Frame
  */
-public class ex1_2 {
+public class Ex1_2 {
     public static void main(String[] args) {
 
         //Внутрішній клас методу

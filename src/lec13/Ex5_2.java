@@ -8,7 +8,7 @@ import java.awt.event.WindowEvent;
  * Менеджер GridBagLayout для панелі
  * і визначення відносного розташування компонентів
  */
-public class ex5_2 {
+public class Ex5_2 {
     public static void main(String[] args) {
 
         //Внутрішній клас методу

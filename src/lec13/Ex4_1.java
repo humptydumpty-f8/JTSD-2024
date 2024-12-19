@@ -5,10 +5,9 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 /**
- * Менеджер GridLayout:
- * Нульова кількість рядків чи стовпців означає, що менеджер сам створить необхідне їх число
+ * Менеджер GridLayout для компоновки кнопок калькулятора
  */
-public class ex4_2 {
+public class Ex4_1 {
     public static void main(String[] args) {
 
         //Внутрішній клас методу
@@ -21,9 +20,9 @@ public class ex4_2 {
                 setLocation(200,300);
 
                 //Перевизначення дефолтного менеджера форми на GridLayout
-                setLayout(new GridLayout(3, 0));//менеджер сам визначає кількість колонок
-
-                for (int i=0; i<17; i++){add(new Label(Integer.toString(i)));}//додавання нумерованих міток
+                setLayout(new GridLayout(4, 4, 5, 5));//таблиця 4х4 з відступами по 5 пікселів
+                String st = new String("789/456*123-0.=+");//радок для написів на кнопках
+                for (char c : st.toCharArray()){add(new Button(Character.toString(c)));}//додавання кнопок на форму
 
                 setVisible(true);//візуалізація форми
 

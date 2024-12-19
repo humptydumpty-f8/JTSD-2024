@@ -5,26 +5,25 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 /**
- * Менеджер BorderLayout для компоновки вікна
+ * Менеджер GridLayout:
+ * Нульова кількість рядків чи стовпців означає, що менеджер сам створить необхідне їх число
  */
-public class ex3_1 {
+public class Ex4_2 {
     public static void main(String[] args) {
 
         //Внутрішній клас методу
-        class BorderLayoutDemo extends Frame {
+        class GridLayoutDemo extends Frame {
 
             //Конструктор
-            public BorderLayoutDemo(String title)  {
+            public GridLayoutDemo(String title) {
                 super(title);
                 setSize(300,200);
                 setLocation(200,300);
 
-                //Розміщення компонентів на формі дефолтним менеджером - BorderLayout
-                add(new Button("North"),BorderLayout.NORTH);
-                add(new Button("South"), BorderLayout.SOUTH);
-                add(new Button("West"), BorderLayout.WEST);
-                add(new Button("East"), BorderLayout.EAST);
-                add(new Button("Center"));
+                //Перевизначення дефолтного менеджера форми на GridLayout
+                setLayout(new GridLayout(3, 0));//менеджер сам визначає кількість колонок
+
+                for (int i=0; i<17; i++){add(new Label(Integer.toString(i)));}//додавання нумерованих міток
 
                 setVisible(true);//візуалізація форми
 
@@ -39,6 +38,6 @@ public class ex3_1 {
         }
 
         //Сценарій роботи
-        new BorderLayoutDemo("BorderLayoutDemo");//відкри форму
+        new GridLayoutDemo("GridLayoutDemo");
     }
 }
